@@ -1,8 +1,7 @@
 userInput = input("Choose your password: ")
+validPass = False
 
 def isValid(password):
-
-    if(len(password) > 5 and len(password) < 15):
 
         lowerCase = False
         upperCase = False
@@ -35,8 +34,12 @@ def isValid(password):
             print("Valid password.")
 
 
+while (validPass == False):
 
+    if (len(userInput) > 5 and len(userInput) < 15):
+        validPass = True
+        print(isValid(userInput))
     else:
-        return "Password must be between the length of 6 and 14. "
+        print("Password must be between the length of 6 and 14.")
+        userInput = input("Choose your password: ")
 
-print(isValid(userInput))
