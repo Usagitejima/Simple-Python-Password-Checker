@@ -21,17 +21,21 @@ def isValid(password):
             if(not char.isalnum()):
                 special = True
 
-        if (num == False or lowerCase == False or upperCase == False or special == False):
+        while (num == False or lowerCase == False or upperCase == False or special == False):
             if (num == False):
                 print("At least one number is required. ")
-            if(lowerCase == False):
+            if (lowerCase == False):
                 print("At least one lowercase letter is required. ")
-            if(upperCase == False):
+            if (upperCase == False):
                 print("At least one uppercase letter is required. ")
-            if(special == False):
+            if (special == False):
                 print("At least one special character is required. ")
+
+            password = input("Enter valid password: ")
+
         else:
             print("Valid password.")
+
 
 
 while (validPass == False):
